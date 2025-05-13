@@ -14,12 +14,19 @@ const Admin = lazy(() => import("./pages/Admin"));
 
 const queryClient = new QueryClient();
 
+// Obtém o nome do subdiretório a partir da URL
+const getBasename = () => {
+  // Se estiver em produção e possuir um subdiretório, adicione-o aqui
+  // Por exemplo, se o site estiver em example.com/app, o basename seria '/app'
+  return process.env.NODE_ENV === 'production' ? '/' : '/';
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route 

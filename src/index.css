@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 30 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 35 25% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 143 30% 30%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 35 5% 95%;
+    --muted-foreground: 35 5% 45%;
+
+    --accent: 35 25% 65%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 5% 85%;
+    --input: 35 5% 85%;
+    --ring: 35 25% 65%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.form-step {
+  @apply animate-fade-in;
+}
+
+/* Sombras para textos sobre imagens */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-shadow-sm {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilos para Slider de fundo */
+.slick-slider, .slick-list, .slick-track {
+  height: 100%;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+/* Estilos para fundo gradiente */
+.gradient-background {
+  background-color: #e8f0ea; /* Cor de fundo temporária enquanto a imagem carrega */
+  background-image: url('/sage-green-background-gradient-illustration-free-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transform: scale(1.05);
+  filter: brightness(1.05) contrast(0.95);
+  will-change: transform;
+  transition: opacity 0.3s ease;
+}

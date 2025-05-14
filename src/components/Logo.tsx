@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 interface LogoProps {
   className?: string;
   showText?: boolean;
+  textColor?: string;
 }
 
-export const Logo: React.FC<LogoProps> = ({ className, showText = true }) => {
+export const Logo: React.FC<LogoProps> = ({ className, showText = true, textColor = "text-architect-dark" }) => {
   const [imageSrc, setImageSrc] = useState<string>('/Dafe-Logo.png');
   const [imageError, setImageError] = useState<boolean>(false);
 
@@ -36,8 +37,8 @@ export const Logo: React.FC<LogoProps> = ({ className, showText = true }) => {
         <div className="relative inline-block overflow-hidden rounded">
           {imageError ? (
             // Fallback para quando a imagem não carregar
-            <div className="h-12 md:h-16 bg-architect-light flex items-center justify-center px-3 py-1 border border-architect-beige">
-              <span className="text-architect-dark font-semibold text-lg">Dannieli Felix</span>
+            <div className={`h-12 md:h-16 bg-transparent flex items-center justify-center px-3 py-1`}>
+              <span className={`${textColor} font-semibold text-lg`}>Dannieli Felix</span>
             </div>
           ) : (
             <img 
@@ -53,7 +54,7 @@ export const Logo: React.FC<LogoProps> = ({ className, showText = true }) => {
         </div>
         
         {showText && (
-          <p className="text-architect-dark/80 mt-1 text-xs md:text-sm font-medium">
+          <p className={`${textColor}/80 mt-1 text-xs md:text-sm font-medium`}>
             
           </p>
         )}

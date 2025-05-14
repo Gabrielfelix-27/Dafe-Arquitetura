@@ -5,9 +5,15 @@ interface LogoProps {
   className?: string;
   showText?: boolean;
   textColor?: string;
+  logoHeight?: string;
 }
 
-export const Logo: React.FC<LogoProps> = ({ className, showText = true, textColor = "text-architect-dark" }) => {
+export const Logo: React.FC<LogoProps> = ({ 
+  className, 
+  showText = true, 
+  textColor = "text-architect-dark",
+  logoHeight = "h-12 md:h-16"
+}) => {
   const [imageSrc, setImageSrc] = useState<string>('/Dafe-Logo.png');
   const [imageError, setImageError] = useState<boolean>(false);
 
@@ -37,14 +43,14 @@ export const Logo: React.FC<LogoProps> = ({ className, showText = true, textColo
         <div className="relative inline-block overflow-hidden rounded">
           {imageError ? (
             // Fallback para quando a imagem não carregar
-            <div className={`h-12 md:h-16 bg-transparent flex items-center justify-center px-3 py-1`}>
+            <div className={`${logoHeight} bg-transparent flex items-center justify-center px-3 py-1`}>
               <span className={`${textColor} font-semibold text-lg`}>Dannieli Felix</span>
             </div>
           ) : (
             <img 
               src={imageSrc}
               alt="Dannieli Felix - Arquitetura & Design de Interiores" 
-              className="h-12 md:h-16 w-auto object-contain" 
+              className={`${logoHeight} w-auto object-contain`}
               onError={(e) => {
                 console.error('Erro ao carregar o logo com caminho:', imageSrc);
                 setImageError(true);

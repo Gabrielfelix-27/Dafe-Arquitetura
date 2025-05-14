@@ -67,7 +67,11 @@ export default {
 					'beige': '#E6E2D3',
 					'green': '#4B5842',
 					'dark': '#333333',
+					'dark-light': '#5a5a5a',
+					'dark-lighter': '#787878',
 					'accent': '#A67F5D',
+					'brown': '#d2c3af',
+					'brown-light': '#f3efe8'
 				}
 			},
 			borderRadius: {
@@ -76,7 +80,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
+				sans: ['Poppins', 'sans-serif'],
 				display: ['Playfair Display', 'serif']
 			},
 			keyframes: {

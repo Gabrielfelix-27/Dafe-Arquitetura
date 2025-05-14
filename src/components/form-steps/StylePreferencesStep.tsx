@@ -14,7 +14,7 @@ const styles = [
     name: "styles",
     label: "Moderno",
     description: "Clean, contemporâneo, com linhas retas e minimalismo",
-    imageSrc: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=500&auto=format&fit=crop"
+    imageSrc: "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=500&auto=format&fit=crop"
   },
   {
     id: "classico",
@@ -28,7 +28,7 @@ const styles = [
     name: "styles",
     label: "Industrial",
     description: "Materiais brutos, metal, concreto aparente",
-    imageSrc: "https://images.unsplash.com/photo-1525438160292-a4a860951216?q=80&w=500&auto=format&fit=crop"
+    imageSrc: "https://images.unsplash.com/photo-1564078516393-cf04bd966897?q=80&w=500&auto=format&fit=crop"
   },
   {
     id: "escandinavo",
@@ -49,14 +49,14 @@ const styles = [
     name: "styles",
     label: "Rústico",
     description: "Aconchegante, materiais naturais, madeira",
-    imageSrc: "https://images.unsplash.com/photo-1533377358125-8c9adf396a70?q=80&w=500&auto=format&fit=crop"
+    imageSrc: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=500&auto=format&fit=crop"
   },
   {
     id: "ecletico",
     name: "styles",
     label: "Eclético",
     description: "Mistura de estilos, personalizado",
-    imageSrc: "https://images.unsplash.com/photo-1592247350590-4d37c73c7fb8?q=80&w=500&auto=format&fit=crop"
+    imageSrc: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=500&auto=format&fit=crop"
   }
 ];
 

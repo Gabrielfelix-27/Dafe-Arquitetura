@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="w-full py-2 md:py-3 px-4 bg-architect-green border-b border-architect-green/30">
       <div className="container max-w-7xl mx-auto flex justify-between items-center">
-        <Logo className="mb-0" textColor="text-white" logoHeight="h-10 md:h-14" />
+        <Logo className="mb-0" textColor="text-white" logoHeight="h-10 md:h-14" isWhite={true} />
         
         {/* Menu para Desktop */}
         <div className="hidden md:flex items-center gap-6">
@@ -35,7 +35,7 @@ const Header = () => {
             <SheetContent side="right" className="w-[240px] p-0 bg-architect-green text-white">
               <div className="flex flex-col h-full">
                 <div className="p-4 border-b border-white/20">
-                  <Logo className="mb-2" showText={false} textColor="text-white" logoHeight="h-10" />
+                  <Logo className="mb-2" showText={false} textColor="text-white" logoHeight="h-10" isWhite={true} />
                 </div>
                 <div className="flex-1 p-4">
                   <nav className="flex flex-col gap-4">

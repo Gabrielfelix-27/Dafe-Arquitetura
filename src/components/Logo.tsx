@@ -6,13 +6,15 @@ interface LogoProps {
   showText?: boolean;
   textColor?: string;
   logoHeight?: string;
+  isWhite?: boolean;
 }
 
 export const Logo: React.FC<LogoProps> = ({ 
   className, 
   showText = true, 
   textColor = "text-architect-dark",
-  logoHeight = "h-12 md:h-16"
+  logoHeight = "h-12 md:h-16",
+  isWhite = false
 }) => {
   const [imageSrc, setImageSrc] = useState<string>('/Dafe-Logo.png');
   const [imageError, setImageError] = useState<boolean>(false);
@@ -33,6 +35,8 @@ export const Logo: React.FC<LogoProps> = ({
     img.src = '/Dafe-Logo.png';
   }, []);
 
+  const whiteFilter = isWhite ? "brightness(0) invert(1)" : "";
+
   return (
     <Link 
       to="/" 
@@ -51,6 +55,7 @@ export const Logo: React.FC<LogoProps> = ({
               src={imageSrc}
               alt="Dannieli Felix - Arquitetura & Design de Interiores" 
               className={`${logoHeight} w-auto object-contain`}
+              style={{ filter: whiteFilter }}
               onError={(e) => {
                 console.error('Erro ao carregar o logo com caminho:', imageSrc);
                 setImageError(true);
